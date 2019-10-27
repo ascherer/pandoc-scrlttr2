@@ -6,11 +6,18 @@
 	12345 Anytown
 	USA
 }
-\setkomavar{fromemail}{john.doe@example.org}\KOMAoptions{fromemail=true}
-\setkomavar{fromfax}{+1 888 555 4223}\KOMAoptions{fromfax=true}
-\setkomavar{frommobilephone}{+1 888 555 2323}\KOMAoptions{frommobilephone=true}
-\setkomavar{fromphone}{+1 888 555 4242}\KOMAoptions{fromphone=true}
-\setkomavar{fromurl}{http://www.example.org}\KOMAoptions{fromurl=true}
+\setkomavar{fromemail}{john.doe@example.org}\KOMAoptions{fromemail=false}
+\setkomavar{fromfax}{+1 888 555 4223}\KOMAoptions{fromfax=false}
+\setkomavar{frommobilephone}{+1 888 555 2323}\KOMAoptions{frommobilephone=false}
+\setkomavar{fromphone}{+1 888 555 4242}\KOMAoptions{fromphone=false}
+\setkomavar{fromurl}{www.example.org}\KOMAoptions{fromurl=false}
+
+\setkomavar{location}{\small
+	\llap{Email: }\texttt{\usekomavar{fromemail}}\\
+	\llap{Fax: }\usekomavar{fromfax}\\
+	\llap{Mobile: }\usekomavar{frommobilephone}\\
+	\llap{Phone: }\usekomavar{fromphone}\\
+	\llap{URL: }\texttt{\usekomavar{fromurl}}}
 
 \setkomavar{place}{Anytown}
 
